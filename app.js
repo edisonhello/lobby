@@ -2,12 +2,12 @@
 
 var path=require('path')
 var mongodb=require('mongodb');
-var MongoClient=mongo.MongoClient;
+var MongoClient=mongodb.MongoClient;
 var bodyParser=require('body-parser');
 var express=require('express');
 var app=express();
 var server=require('http').Server(app);
-var io=require('socker.io')(server);
+var io=require('socket.io')(server);
 var http=require('http');
 var location=function(pos){
 	return __dirname+'/'+pos+'.html';
@@ -21,7 +21,7 @@ app.get('/',function(req,res){
 })
 
 io.sockets.on('connection',function(socket){
-	var id=socket.id
+	var id=socket.id;
 
 	setInteval(function(){
 		var month = new Date().getMonth()+1;

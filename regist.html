@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/static/jQuery/jquery-2.2.2.min.js"></script>
+		<title>registing</title>
+	</head>
+	<style>
+		.tags{
+			text-align: right;
+		}
+		.inputs{
+			width: 150px;
+		}
+	</style>
+	<body>
+		<table width="100%">
+			<tr>
+				<td class="tags" width="40%">
+					username:
+				</td>
+				<td>
+					<input type="text" class="inputs" width="60%">
+				</td>
+			</tr>
+			<tr>
+				<td class="tags" width="40%">
+					password:
+				</td>
+				<td>
+					<input type="password" class="inputs" width="60%">
+				</td>
+			</tr>
+		</table>
+		<table width="100%">
+			<tr>
+				<td style="text-align: right;" width="45%">
+					<button onclick="summit()">summit</button>
+				</td>
+				<td style="text-align: left" width="55%">
+					<button onclick="reset()">reset</button>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
+
+<script type="text/javascript">
+	var socket=io('http://localhost:3000');
+
+	var summit=function(){
+		console.log("summit form");
+	}
+	var reset=function(){
+		console.log("reset form")
+	}
+
+</script>
