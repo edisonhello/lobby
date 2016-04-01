@@ -24,12 +24,20 @@
 					username:
 				</td>
 				<td>
-					<input type="text" class="inputs" width="60%">
+					<input type="text" class="inputs" width="60%" id="username">
 				</td>
 			</tr>
 			<tr>
 				<td class="tags" width="40%">
 					password:
+				</td>
+				<td>
+					<input type="password" class="inputs" width="60%">
+				</td>
+			</tr>
+			<tr>
+				<td class="tags" width="40%">
+					confirm password:
 				</td>
 				<td>
 					<input type="password" class="inputs" width="60%">
@@ -54,9 +62,11 @@
 
 	var summit=function(){
 		console.log("summit form");
+		var username = document.getElementById('username').value;
+
 	}
 	var reset=function(){
-		console.log("reset form")
+		console.log("reset form");
 	}
 
 </script>
